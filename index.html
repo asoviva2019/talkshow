@@ -1,1 +1,386 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>今日、誰のために生きる？ トークショー</title>
+<meta name="description" content="SHOGEN × 長村知愛 トークショー「今日、誰のために生きる？」2027年3月3日（水）大阪・SAYAKAホール">
+<meta property="og:title" content="今日、誰のために生きる？ SHOGEN × 長村知愛 トークショー">
+<meta property="og:description" content="2027年3月3日（水）18:30〜 大阪・SAYAKAホール コンベンションホール">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Montserrat:wght@600;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
+<style>
+body{margin:0}
+img{max-width:100%}
+/* Layout: a painted hero that melts into brick red, then cream "paper" sections; one red CTA band repeats the hero colour. Single deliberate look. */
+:root {
+  --red: #B23A4C;
+  --red-deep: #8E2B3B;
+  --cream: #F6F1E7;
+  --paper: #FBF8F2;
+  --ink: #33291F;
+  --ink-soft: #5E534A;
+  --peach: #E8A07A;
+  --sage: #6DA27A;
+  --line: #E3D9CB;
+  --font-display: 'Montserrat', 'Zen Maru Gothic', sans-serif;
+  --font-body: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'Hiragino Sans', sans-serif;
+  --font-hand: 'Klee One', 'Zen Maru Gothic', serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.85; font-weight: 500; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; text-wrap: pretty; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.narrow { max-width: 720px; }
 
+/* hero */
+.hero { position: relative; overflow: hidden; background: var(--red); color: var(--cream); }
+.hero-art { position: absolute; inset: 0 0 auto 0; height: 78%; display: grid; grid-template-columns: 1fr 1.7fr 1fr 1fr; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(178,58,76,0.15) 0%, rgba(178,58,76,0.35) 35%, rgba(178,58,76,0.85) 75%, var(--red) 100%); }
+.hero-inner { position: relative; padding-block: 72px 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.hero-glow { position: absolute; left: 50%; top: 40px; width: min(900px, 120%); height: 520px; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(70,24,30,0.42) 0%, rgba(70,24,30,0.22) 45%, rgba(70,24,30,0) 72%); pointer-events: none; }
+.talk { position: relative; font-family: var(--font-display); font-weight: 900; font-size: clamp(46px, 11vw, 104px); letter-spacing: 0.12em; line-height: 1; margin-right: -0.12em; text-shadow: 4px 5px 0 rgba(45,16,22,0.5); }
+.duo { position: relative; margin-top: 18px; font-weight: 900; font-size: clamp(20px, 4vw, 34px); letter-spacing: 0.05em; }
+.duo .en { font-family: var(--font-display); }
+.copy-band { position: relative; margin-top: 26px; background: rgba(45,16,22,0.38); border-radius: 14px; padding: 12px 28px 14px; font-family: var(--font-hand); display: flex; flex-direction: column; gap: 4px; }
+.copy-band small { font-size: clamp(14px, 2.4vw, 19px); }
+.copy-band strong { font-weight: 600; font-size: clamp(28px, 6vw, 48px); line-height: 1.3; }
+.when { position: relative; margin-top: 26px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 18px; }
+.date { font-family: var(--font-display); font-weight: 600; line-height: 1; display: flex; align-items: baseline; }
+.date b { font-weight: 600; font-size: clamp(40px, 8vw, 64px); }
+.date i { font-style: normal; font-family: var(--font-body); font-weight: 700; font-size: clamp(18px, 3.4vw, 28px); margin: 0 4px; }
+.time { font-family: var(--font-display); font-weight: 600; font-size: clamp(20px, 3.6vw, 28px); }
+.osaka { display: inline-flex; align-items: baseline; gap: 6px; background: var(--cream); color: var(--red); border-radius: 999px; padding: 6px 20px 8px; line-height: 1; font-weight: 900; font-size: 26px; }
+.osaka span { font-family: var(--font-hand); font-weight: 600; font-size: 18px; }
+.venue-line { position: relative; margin-top: 12px; font-size: 15px; opacity: 0.95; }
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 14px 34px; border-radius: 999px; background: var(--cream); color: var(--red-deep); font-weight: 900; font-size: 18px; text-decoration: none; box-shadow: 0 4px 0 rgba(45,16,22,0.35); transition: transform .15s ease, box-shadow .15s ease; }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(45,16,22,0.35); }
+.cta:focus-visible { outline: 3px solid var(--peach); outline-offset: 3px; }
+.cta svg { width: 20px; height: 20px; }
+.hero .cta { position: relative; margin-top: 28px; }
+.people { position: relative; width: 100%; max-width: 980px; margin-top: 28px; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+.person { position: relative; display: flex; flex-direction: column; align-items: center; }
+.person img { display: block; height: auto; }
+.person.shogen img { width: min(380px, 52vw); }
+.person.chia img { width: min(230px, 32vw); }
+.tag { position: absolute; bottom: 16px; background: var(--cream); color: var(--ink); border-radius: 12px; padding: 4px 14px; text-align: left; line-height: 1.3; }
+.person.shogen .tag { left: 0; }
+.person.chia .tag { right: 0; text-align: right; }
+.tag small { display: block; font-size: 12px; font-weight: 700; color: var(--ink-soft); }
+.tag b { font-size: 18px; font-weight: 900; }
+.tag b.en { font-family: var(--font-display); }
+.books-mini { display: flex; gap: 14px; align-items: flex-end; padding-bottom: 28px; }
+.books-mini img { width: clamp(64px, 11vw, 116px); height: auto; border-radius: 3px; box-shadow: 0 8px 18px rgba(30,10,14,0.35); }
+.books-mini img:first-child { transform: rotate(-3deg); }
+.books-mini img:last-child { transform: rotate(3deg); }
+
+/* sections */
+section { padding-block: 72px; }
+.eyebrow { font-family: var(--font-display); font-weight: 900; font-size: 13px; letter-spacing: 0.22em; color: var(--red); }
+.h2 { margin-top: 8px; font-size: clamp(24px, 4.4vw, 34px); font-weight: 900; line-height: 1.45; }
+.lead { margin-top: 24px; font-size: 17px; }
+.lead + .lead { margin-top: 16px; }
+.hand { font-family: var(--font-hand); font-weight: 600; }
+
+.intro { background: var(--cream); }
+.intro .quote { font-family: var(--font-hand); font-weight: 600; font-size: clamp(22px, 4vw, 30px); line-height: 1.6; color: var(--red-deep); }
+
+/* outline */
+.outline-grid { margin-top: 28px; display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1.5px solid var(--line); }
+.row { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding-block: 16px; border-bottom: 1.5px solid var(--line); }
+.row dt { font-weight: 900; color: var(--red); }
+.row dd { margin: 0; }
+.row dd small { display: block; font-size: 14px; color: var(--ink-soft); }
+.fees { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.fee { background: var(--cream); border-radius: 12px; padding: 10px 12px; text-align: center; line-height: 1.35; }
+.fee small { display: block; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+.fee b { font-family: var(--font-display); font-weight: 900; font-size: 24px; }
+.fee b span { font-family: var(--font-body); font-size: 14px; margin-left: 2px; }
+
+/* speakers */
+.speaker { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 40px; align-items: start; }
+.speaker + .speaker { margin-top: 80px; }
+.portrait { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 5; max-width: 100%; }
+.portrait .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.portrait .cut { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 92%; height: auto; }
+.name { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 6px; }
+.name h3 { font-size: clamp(28px, 5vw, 38px); font-weight: 900; line-height: 1.2; }
+.name h3.en { font-family: var(--font-display); letter-spacing: 0.04em; }
+.name span { font-weight: 700; color: var(--ink-soft); }
+.role { display: inline-block; margin-top: 4px; font-size: 14px; font-weight: 900; color: var(--red); }
+.pull { margin-top: 22px; padding-left: 18px; border-left: 4px solid var(--peach); font-family: var(--font-hand); font-weight: 600; font-size: clamp(19px, 3vw, 23px); line-height: 1.7; }
+.speaker .lead { font-size: 16px; }
+.facts { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.facts li { background: var(--cream); border-radius: 999px; padding: 4px 14px; font-size: 14px; font-weight: 700; }
+
+.gallery { margin-top: 28px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; display: block; }
+.gallery figcaption { margin-top: 4px; font-size: 12px; color: var(--ink-soft); font-family: var(--font-display); font-weight: 600; }
+
+/* books */
+.books { background: var(--cream); }
+.book-list { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.book { background: var(--paper); border-radius: 18px; padding: 24px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: start; }
+.book img { width: 120px; height: auto; border-radius: 3px; box-shadow: 0 6px 14px rgba(51,41,31,0.22); }
+.book h3 { font-size: 19px; font-weight: 900; line-height: 1.45; }
+.book .by { margin-top: 4px; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+.book p { margin-top: 10px; font-size: 15px; line-height: 1.8; }
+
+/* for whom */
+.for-list { margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 0; list-style: none; }
+.for-list li { border: 1.5px solid var(--line); border-radius: 16px; padding: 18px; font-weight: 700; line-height: 1.7; }
+
+/* final cta */
+.final { background: var(--red); color: var(--cream); text-align: center; }
+.final .eyebrow { color: var(--peach); }
+.final .h2 { color: var(--cream); }
+.final-grid { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px; }
+.qr { background: #FFFFFF; border-radius: 12px; padding: 8px; display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--ink); font-size: 12px; font-weight: 700; }
+.qr img { width: 132px; height: 132px; image-rendering: pixelated; display: block; }
+.final-note { margin-top: 18px; font-size: 14px; opacity: 0.95; }
+.contact { margin-top: 28px; display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; font-size: 15px; }
+.contact code { font-family: var(--font-display); font-weight: 600; background: rgba(255,255,255,0.14); padding: 4px 10px; border-radius: 8px; user-select: all; }
+.copy-btn { min-height: 36px; border: 1.5px solid var(--cream); background: transparent; color: var(--cream); border-radius: 999px; padding: 4px 14px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.copy-btn:focus-visible { outline: 3px solid var(--peach); outline-offset: 2px; }
+
+footer { background: var(--red-deep); color: var(--cream); padding-block: 22px calc(22px + 72px); font-size: 13px; text-align: center; }
+footer p + p { margin-top: 4px; opacity: 0.85; }
+
+/* sticky cta (phones) */
+.sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: rgba(142,43,59,0.94); display: none; }
+.sticky .cta { width: 100%; min-height: 50px; }
+
+@media (max-width: 760px) {
+  .hero-art { grid-template-columns: repeat(4, minmax(0, 1fr)); height: 70%; }
+  .hero-inner { padding-block: 48px 0; }
+  .books-mini { display: none; }
+  .speaker { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .portrait { max-width: 300px; }
+  .book-list { grid-template-columns: minmax(0, 1fr); }
+  .for-list { grid-template-columns: minmax(0, 1fr); }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .row { grid-template-columns: 72px minmax(0, 1fr); gap: 10px; }
+  .sticky { display: block; }
+  section { padding-block: 56px; }
+}
+@media (max-width: 440px) {
+  .fees { grid-template-columns: minmax(0, 1fr); }
+  .book { grid-template-columns: 88px minmax(0, 1fr); padding: 18px; gap: 14px; }
+  .book img { width: 88px; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-art" aria-hidden="true">
+    <img src="img/strip_pacha18.jpg" alt="">
+    <img src="img/strip_tokoyo6.jpg" alt="">
+    <img src="img/strip_tokoyo9.jpg" alt="">
+    <img src="img/strip_pacha4.jpg" alt="">
+  </div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <h1 class="talk">TALK SHOW</h1>
+    <p class="duo"><span class="en">SHOGEN</span> × 長村知愛 トークショー</p>
+    <p class="copy-band">
+      <small>「こう生きたらいいよ」がわからない、未知なる世界。</small>
+      <strong>今日、誰のために生きる？</strong>
+    </p>
+    <div class="when">
+      <div class="date" aria-label="2027年3月3日 水曜日"><b>2027</b><i>年</i><b>3</b><i>月</i><b>3</b><i>日</i><i>（水）</i></div>
+      <span class="time">18:30–20:30</span>
+      <span class="osaka"><span>in</span>大阪</span>
+    </div>
+    <p class="venue-line">SAYAKAホール（大阪狭山市文化会館）コンベンションホール ／ 開場17:30</p>
+    <a class="cta" href="https://www.reservestock.jp/events/1203574" target="_blank" rel="noopener">申し込む
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+    </a>
+    <div class="people">
+      <div class="person shogen">
+        <img src="img/shogen_sticker.png" alt="本を持つSHOGENさん">
+        <div class="tag"><small>ペンキ画家</small><b class="en">SHOGEN</b></div>
+      </div>
+      <div class="books-mini" aria-hidden="true">
+        <img src="img/book2.jpg" alt="">
+        <img src="img/book_asoviva.png" alt="">
+      </div>
+      <div class="person chia">
+        <img src="img/chia_sticker.png" alt="長村知愛さん">
+        <div class="tag"><small>未知先案内人</small><b>長村 知愛</b></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap narrow">
+      <p class="eyebrow">ABOUT</p>
+      <h2 class="h2">生きてきた場所も、年齢も違うふたりが<br>同じ問いをまんなかに語り合う夜。</h2>
+      <p class="lead">アフリカ・タンザニアの小さな村で、村人と暮らしながら「人の生き方の本質」を学んだペンキ画家・SHOGEN。</p>
+      <p class="lead">小学5年生で学校に行かない選択をし、16歳でNPOを立ち上げ、オルタナティブスクールを開校した、23歳の未知先案内人・長村知愛。</p>
+      <p class="lead">「こう生きたらいいよ」という正解が見えない時代に、わたしたちは今日、誰のために生きるのか。ふたりの言葉が重なる一夜です。</p>
+    </div>
+  </section>
+
+  <section id="outline">
+    <div class="wrap narrow">
+      <p class="eyebrow">INFORMATION</p>
+      <h2 class="h2">開催概要</h2>
+      <dl class="outline-grid">
+        <div class="row"><dt>日時</dt><dd>2027年3月3日（水）<br>開場17:30 ／ 開演18:30〜20:30</dd></div>
+        <div class="row"><dt>会場</dt><dd>SAYAKAホール（大阪狭山市文化会館）コンベンションホール<small>大阪府大阪狭山市狭山1-875-1　南海高野線「大阪狭山市」駅から徒歩3分</small></dd></div>
+        <div class="row"><dt>参加費</dt><dd>
+          <div class="fees">
+            <div class="fee"><small>大人</small><b>3,500<span>円</span></b></div>
+            <div class="fee"><small>中高生</small><b>1,000<span>円</span></b></div>
+            <div class="fee"><small>小学生</small><b>500<span>円</span></b></div>
+          </div>
+        </dd></div>
+        <div class="row"><dt>定員</dt><dd>200名</dd></div>
+        <div class="row"><dt>主催</dt><dd>認定NPO法人ASOVIVA</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="speakers-sec" id="speakers" style="padding-top: 0">
+    <div class="wrap">
+      <p class="eyebrow">SPEAKERS</p>
+      <h2 class="h2">登壇者</h2>
+
+      <article class="speaker" style="margin-top: 36px">
+        <div class="portrait">
+          <img class="bg" src="img/tokoyo6.jpg" alt="">
+          <img class="cut" src="img/shogen_sticker.png" alt="SHOGENさん">
+        </div>
+        <div>
+          <span class="role">ペンキ画家</span>
+          <div class="name"><h3 class="en">SHOGEN</h3><span>（しょうげん）</span></div>
+          <p class="pull">「人の生き方の本質」を、<br>アフリカの小さな村で学んだ。</p>
+          <p class="lead">ある日「ティンガティンガ」というアフリカのペンキ画に心惹かれ、翌日には会社を辞め、何の伝手もないまま単身アフリカへ。ティンガティンガ村からブンジュ村へ渡り、そこで村人と共に生活をしながら絵の修行を許された「唯一の外国人」として絵を学ぶ。</p>
+          <p class="lead">また同時に、村長を始め村人たちとの交流により「人の生き方の本質」を学び、帰国後は個展やワークショップで全国を回りながら、「日本人の素晴らしさ」「幸せになる生き方・考え方」を伝えるべくトークショーを精力的に行っている。</p>
+          <p class="lead">ティンガティンガの「人々を幸せにする絵」という精神のもと、「SHOGEN流」として、国内外で個展を開いている。また小中学校や神社仏閣、各種施設などでワークショップも開催している。</p>
+          <ul class="facts">
+            <li>タンザニア・ブンジュ村で修行</li>
+            <li>国内外で個展・ワークショップ</li>
+            <li>シリーズ累計30万部の著者</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="speaker">
+        <div class="portrait">
+          <img class="bg" src="img/tokoyo9.jpg" alt="">
+          <img class="cut" src="img/chia_sticker.png" alt="長村知愛さん" style="width: 62%">
+        </div>
+        <div>
+          <span class="role">未知先案内人 ／ 認定NPO法人ASOVIVA 代表理事</span>
+          <div class="name"><h3>長村 知愛</h3></div>
+          <p class="pull">学校に行かない選択をした親子が、<br>明日を楽しみに眠れる世界にしたい。</p>
+          <p class="lead">小学校5年生の時に不登校になり、自己否定に陥る日々を過ごす。14歳の時に抱いた、この願いを胸に、16歳で認定NPO法人ASOVIVAを立ち上げて代表理事に就任し、オルタナティブスクールを開校。</p>
+          <p class="lead">大阪府南河内郡の田園地帯にある古民家を校舎に、5歳から18歳の子どもたちが通うオルタナティブスクール「ASOVIVA!」を運営している。決まったカリキュラムはなく、大人は「先生」ではなく「スタッフ」として子どもと対等に向き合う。ルールもトラブルも、指示ではなく話し合いで決めていく。その根っこにあるのは「人は自ら学び、育つことができる」という考え方だ。</p>
+          <p class="lead">ほかにも、コミュニティカフェやコミュニティガーデンの運営を通して、大人も子どももつながり合える場をつくっている。</p>
+          <p class="lead">現在23歳。未知先案内人として、まだ見ぬ未来を明るく照らすべく講演者としても活動中。</p>
+          <ul class="facts">
+            <li>16歳でNPOを設立</li>
+            <li>オルタナティブスクール「ASOVIVA!」</li>
+            <li>コミュニティカフェ・ガーデン運営</li>
+            <li>著書『自ら考え育つ環境づくり』</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="books" id="books">
+    <div class="wrap">
+      <p class="eyebrow">BOOKS</p>
+      <h2 class="h2">ふたりの本</h2>
+      <div class="book-list">
+        <article class="book">
+          <img src="img/book2.jpg" alt="書籍『今日、誰のために生きる？』の表紙">
+          <div>
+            <h3>今日、誰のために生きる？</h3>
+            <p class="by">ひすいこたろう × SHOGEN</p>
+            <p>アフリカの人口200人ほどの小さな村、ブンジュ村。SHOGENさんが村人たちと暮らすなかで受け取った、幸せがずっと続く30の物語。喜びとは？ 失敗とは？ 仲間とは？ 仕事とは？ そして幸せとは？ シリーズ累計30万部。2026年4月には新装版も刊行。</p>
+          </div>
+        </article>
+        <article class="book">
+          <img src="img/book_asoviva.png" alt="書籍『自ら考え育つ環境づくり』の表紙">
+          <div>
+            <h3>自ら考え育つ環境づくり</h3>
+            <p class="by">認定NPO法人ASOVIVA（パレードブックス）</p>
+            <p>オルタナティブスクール「ASOVIVA!」の5年間の運営から生まれた本。ルールの決め方、トラブルのときの話し合い、スタッフの関わり方、子どもたちの変化。子どもが自分で考え、自分で決められるようになるための環境づくりを、実践からまとめた一冊。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="for">
+    <div class="wrap">
+      <p class="eyebrow">FOR YOU</p>
+      <h2 class="h2">こんな方に来てほしい</h2>
+      <ul class="for-list">
+        <li>子どもの「学校に行かない」に、どう向き合えばいいか迷っている親子</li>
+        <li>毎日をがんばっているのに、ふと「誰のために？」と立ち止まった方</li>
+        <li>SHOGENさんの本や絵、ASOVIVAの活動に心を動かされた方</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="final" id="apply">
+    <div class="wrap">
+      <p class="eyebrow">ENTRY</p>
+      <h2 class="h2">2027年3月3日、大阪でお会いしましょう。</h2>
+      <div class="final-grid">
+        <a class="cta" href="https://www.reservestock.jp/events/1203574" target="_blank" rel="noopener">申し込みページへ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+        </a>
+        <div class="qr"><img src="img/qr.png" alt="申し込みページのQRコード">スマホで読み取り</div>
+      </div>
+      <p class="final-note">定員200名 ／ 大人3,500円・中高生1,000円・小学生500円</p>
+      <div class="contact">
+        <span>お問い合わせ</span>
+        <code id="mail">jiyu.asoviva@gmail.com</code>
+        <button class="copy-btn" id="copy-mail" type="button">コピー</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>主催：認定NPO法人ASOVIVA</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="cta" href="https://www.reservestock.jp/events/1203574" target="_blank" rel="noopener">申し込む（定員200名）</a>
+</div>
+
+<script>
+document.getElementById('copy-mail').addEventListener('click', function () {
+  var btn = this;
+  var text = document.getElementById('mail').textContent;
+  function done() { btn.textContent = 'コピーしました'; setTimeout(function () { btn.textContent = 'コピー'; }, 1800); }
+  function fallback() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = '選択しました';
+  }
+  try {
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } catch (e) { fallback(); }
+});
+</script>
+</body>
+</html>
